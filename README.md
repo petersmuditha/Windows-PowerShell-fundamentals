@@ -77,76 +77,58 @@ Filters objects from the pipeline based on a script block or comparison operator
 
   ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
 
-### 10. `netstat` 
-Displays all active network connections (incoming and outgoing) and listening ports.
-* **Why it matters:** Provides Visibility. It helps admins see if a computer is communicating with an unauthorized external server.
+### 10. `Select-Object` 
+Selects specific properties of an object or a set of objects.
+* **Why it matters:** Optimizes performance and output. By discarding unnecessary data, you reduce the memory footprint of your scripts and focus only on the relevant metrics.
 
   ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
 
-### 11. `netstat -abon` 
-A powerful variation that shows the executable (program) involved in every connection, along with the Process ID (PID).
- **Why it matters:** A key Cybersecurity tool. If a computer is infected with malware, netstat -abon can reveal exactly which "hidden" program is sending data to a hacker's server.
+### 11. `Select-String` 
+Finds text patterns in strings and files using regular expressions (Regex).
+ **Why it matters:** Indispensable for log analysis. It allows you to search through thousands of lines of code or logs to find specific error codes or security events.
 
   ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
 
-  ### 12. `dir` 
-Lists the files and subdirectories in the current directory.
- **Why it matters:** Provides immediate visibility into what is stored on a drive.
+  ### 12. `Get-ComputerInfo` 
+Retrieves a consolidated list of system and operating system properties.
+ **Why it matters:** Provides a comprehensive hardware and software "snapshot," which is essential for asset management and troubleshooting system compatibility.
 
   ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
 
-  ### 13. `dir /a` 
-Lists all files, including those with hidden or system attributes.
- **Why it matters:** Critical for Security and Troubleshooting. Malware often hides its files by setting the "hidden" attribute; this command ensures nothing stays out of sight.
+  ### 13. `Get-LocalUser` 
+Gets the local user accounts on the computer.
+ **Why it matters:** It allows admins to monitor for unauthorized accounts and verify that password policies are being applied to local users.
 
   ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
 
-  ### 14. `dir /s` 
-Displays files in the current directory and all subdirectories.
- **Why it matters:** A powerful Search Tool. It allows an admin to find a specific lost file across an entire hard drive from a single command.
+  ### 14. `Get-NetIPConfiguration` 
+Gets IP network configuration, including DNS and default gateway.
+ **Why it matters:** Offers a high-level view of network health, making it the first step in diagnosing connectivity issues.
 
   ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
 
-  ### 15. `tree` 
-Graphically displays the folder structure of a drive or path.
- **Why it matters:** Excellent for Documentation. It helps IT managers visualize complex folder hierarchies when organizing shared company drives or project structures.
+  ### 15. `Get-NetIPAddress` 
+Retrieves the IP addresses assigned to the network interfaces.
+ **Why it matters:** Essential for low-level network troubleshooting and verifying that the correct IP/Subnet is bound to the physical or virtual adapter.
 
   ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
 
-  ### 16. `mkdir` 
-Creates a new folder.
- **Why it matters:** Used in Deployment Scripts to automatically create necessary folders for new software or user profiles.
+  ### 16. `Get-NetTCPConnection` 
+Displays active TCP connections and their associated ports/processes.
+ **Why it matters:** It helps identify "who is talking to whom," allowing you to spot suspicious outgoing connections or unauthorized listening ports.
 
   ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
 
-  ### 17. `rmdir` 
-Deletes a folder.
- **Why it matters:** Used for System Cleanup to remove old, obsolete project folders and reclaim disk space.
+  ### 17. `Get-Process` 
+Gets the processes that are running on the computer.
+ **Why it matters:** Fundamental for performance monitoring and management. It allows you to identify "zombie" processes or those consuming excessive CPU/RAM.
 
   ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
 
-  ### 18. `copy` 
-Copies one or more files to another location.
- **Why it matters:** Fundamental for Data Backups. It allows for the quick duplication of critical configuration files before making changes.
+  ### 18. `Get-Service` 
+Gets the status of the services on the computer.
+ **Why it matters:** Critical for ensuring system uptime. It allows for automated checks to see if essential services (like a Web Server or Database) are running and healthy.
 
-  ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
-
-  ### 19. `move` 
-Moves files or renames directories.
- **Why it matters:** Essential for Data Migration. It allows for the reorganization of files without creating unnecessary duplicates.
-  
-  ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
-
-  ### 20. `erase` 
-Deletes one or more files.
- **Why it matters:** Vital for Privacy and Maintenance. It is used to wipe temporary files or sensitive data that is no longer needed by the organization.
-
-  ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
-
-  ### 21. `tasklist` 
-Displays a list of all currently running processes (apps and services) along with their memory usage.
- **Why it matters:** A key Performance and Security Audit tool. If a computer is slow, tasklist identifies the "resource hog." If a computer is suspected of having a virus, it allows the admin to see if any suspicious, unrecognized programs are running in the background.
-  
   ![image alt](https://github.com/petersmuditha/Linux-for-cybersecutry/blob/0d8ed979dd37fe43dcf48b0d73b9e676b0888044/Cattura5.PNG)
 
   ## 🏁 Conclusion & Next Steps
